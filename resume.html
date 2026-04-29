@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ved Pawar - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&family=Times+New+Roman&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif', 'Times New Roman', Georgia, serif;
+            font-size: 10.5pt;
+            line-height: 1.35;
+            color: #000;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .resume-page {
+            width: 8.5in;
+            min-height: 11in;
+            background: #fff;
+            padding: 0.5in 0.6in;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+
+        /* ─── HEADER ─── */
+        .header {
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .header .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 8px;
+            border: 2px solid #333;
+        }
+
+        .header h1 {
+            font-size: 22pt;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .header .contact-line {
+            font-size: 9.5pt;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        .header .links-line {
+            font-size: 9.5pt;
+            color: #333;
+        }
+
+        .header .links-line a {
+            color: #0563C1;
+            text-decoration: none;
+        }
+
+        .header .links-line a:hover {
+            text-decoration: underline;
+        }
+
+        .separator-bold {
+            border: none;
+            border-top: 2px solid #000;
+            margin: 6px 0 4px 0;
+        }
+
+        .separator-thin {
+            border: none;
+            border-top: 1px solid #000;
+            margin: 3px 0 4px 0;
+        }
+
+        /* ─── SECTIONS ─── */
+        .section {
+            margin-bottom: 6px;
+        }
+
+        .section-title {
+            font-size: 11.5pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0;
+        }
+
+        /* ─── SUMMARY ─── */
+        .summary-text {
+            font-size: 10pt;
+            text-align: justify;
+            line-height: 1.4;
+        }
+
+        /* ─── SKILLS TABLE ─── */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10pt;
+        }
+
+        .skills-table td {
+            padding: 2px 4px;
+            vertical-align: top;
+        }
+
+        .skills-table td:first-child {
+            font-weight: 700;
+            width: 180px;
+            white-space: nowrap;
+        }
+
+        /* ─── PROJECTS ─── */
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1px;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 10.5pt;
+        }
+
+        .project-link {
+            font-size: 9pt;
+            color: #0563C1;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-tech {
+            font-style: italic;
+            font-size: 9.5pt;
+            color: #444;
+            margin-bottom: 2px;
+        }
+
+        .project-bullets {
+            padding-left: 18px;
+            margin-top: 1px;
+        }
+
+        .project-bullets li {
+            font-size: 10pt;
+            margin-bottom: 1px;
+            text-align: justify;
+            line-height: 1.35;
+        }
+
+        /* ─── EDUCATION ─── */
+        .edu-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .edu-degree {
+            font-weight: 700;
+            font-size: 10.5pt;
+        }
+
+        .edu-date {
+            font-size: 10pt;
+            font-style: italic;
+        }
+
+        .edu-school {
+            font-size: 10pt;
+            color: #333;
+        }
+
+        .edu-details {
+            font-size: 10pt;
+        }
+
+        .pipe {
+            margin: 0 4px;
+            color: #666;
+        }
+
+        /* ─── PRINT ─── */
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+            .resume-page {
+                box-shadow: none;
+                padding: 0.4in 0.5in;
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-page">
+
+        <!-- ═══════════════ HEADER ═══════════════ -->
+        <div class="header">
+            <img src="assets/profile.jpeg" alt="Profile Picture" class="profile-pic">
+            <h1>Ved Pawar</h1>
+            <div class="contact-line">
+                India &nbsp;|&nbsp;
+                <a href="mailto:ved.pawar2024@nst.rishihood.edu.in" style="color:#0563C1; text-decoration:none;">ved.pawar2024@nst.rishihood.edu.in</a>
+            </div>
+            <div class="links-line">
+                <a href="https://www.linkedin.com/in/vedpawar2254/">LinkedIn</a>
+                <span class="pipe">|</span>
+                <a href="https://github.com/vedpawar2254">GitHub</a>
+            </div>
+        </div>
+
+        <hr class="separator-bold">
+
+        <!-- ═══════════════ SUMMARY ═══════════════ -->
+        <div class="section">
+            <div class="section-title">Summary</div>
+            <hr class="separator-thin">
+            <p class="summary-text">
+                Data Visualization & Analysis enthusiast with hands-on experience in Excel, Tableau, and Python. Passionate about turning raw data into actionable insights through clean dashboards and rigorous analysis.
+            </p>
+        </div>
+
+        <!-- ═══════════════ TECHNICAL SKILLS ═══════════════ -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <hr class="separator-thin">
+            <table class="skills-table">
+                <tr>
+                    <td>Programming Languages:</td>
+                    <td>Python, SQL, JavaScript, HTML/CSS</td>
+                </tr>
+                <tr>
+                    <td>Data Analysis & ML:</td>
+                    <td>Pandas, NumPy, Scikit-learn, SciPy, Statsmodels, Matplotlib, Seaborn</td>
+                </tr>
+                <tr>
+                    <td>Databases:</td>
+                    <td>MySQL, PostgreSQL, MongoDB</td>
+                </tr>
+                <tr>
+                    <td>Visualization Tools:</td>
+                    <td>Tableau, Excel, Matplotlib, Seaborn</td>
+                </tr>
+                <tr>
+                    <td>Tools & Platforms:</td>
+                    <td>Git, GitHub, Jupyter Notebook, VS Code, Google Colab</td>
+                </tr>
+                <tr>
+                    <td>Other:</td>
+                    <td>ETL Pipelines, Data Cleaning, Statistical Analysis, EDA, Feature Engineering</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ═══════════════ PROJECTS ═══════════════ -->
+        <div class="section">
+            <div class="section-title">Projects</div>
+            <hr class="separator-thin">
+
+            <!-- Project 1 -->
+            <div style="margin-bottom: 4px;">
+                <div class="project-header">
+                    <span class="project-title">Ecommerce Dashboard - Data-Driven Retention Strategy</span>
+                    <a class="project-link" href="https://github.com/vedpawar2254/Ecommerce-dashboard" target="_blank">GitHub ↗</a>
+                </div>
+                <div class="project-tech">Google Sheets, Excel, Data Cleaning, Statistical Analysis, Pivot Tables, KPI Design, Dashboarding</div>
+                <ul class="project-bullets">
+                    <li>Analyzed 50,000 e-commerce customer records to identify churn patterns, predict at-risk customers, and quantify retention opportunities.</li>
+                    <li>Completed data cleaning and validation across 26 fields, resolving missing values, type mismatches, out-of-range values, and anomalous records.</li>
+                    <li>Built 11 pivot tables and 5 primary KPIs to study churn by geography, engagement, purchase behavior, and customer service interactions.</li>
+                    <li>Highlighted critical risk drivers such as cart abandonment, service call volume, recency of purchase, and younger customer segments.</li>
+                    <li>Presented business impact findings, including a 28.9% churn rate and $20.6M revenue at risk, with retention recommendations.</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 4px;">
+                <div class="project-header">
+                    <span class="project-title">Amazon Prime Dashboard</span>
+                    <a class="project-link" href="https://github.com/vedpawar2254/Amazon-prime-dashboard" target="_blank">GitHub ↗</a>
+                </div>
+                <div class="project-tech">Tableau, Data Visualization, Dashboard Design, Interactive Filters, Streaming Analytics</div>
+                <ul class="project-bullets">
+                    <li>Created a comprehensive Tableau dashboard analyzing Amazon Prime video content library with interactive visualizations.</li>
+                    <li>Explored content distribution, ratings, category-wise analysis, and trends over time.</li>
+                    <li>Designed a clean dashboard experience with filters and KPI-style summaries for quick insight extraction.</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 4px;">
+                <div class="project-header">
+                    <span class="project-title">UK Road Safety Analysis</span>
+                    <a class="project-link" href="https://github.com/vedpawar2254/SectionE_G-4_UK-Road-Safety" target="_blank">GitHub ↗</a>
+                </div>
+                <div class="project-tech">Python, Pandas, Matplotlib, Seaborn, Jupyter Notebook, EDA, Feature Engineering</div>
+                <ul class="project-bullets">
+                    <li>Performed comprehensive analysis of UK road accident data covering severity distribution, temporal patterns, and weather/road conditions.</li>
+                    <li>Produced 27 visualizations including correlation matrices, heatmaps, and multi-variable safety factor charts.</li>
+                    <li>Applied feature importance analysis to identify key predictors of accident severity.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- ═══════════════ EDUCATION ═══════════════ -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <hr class="separator-thin">
+            <div class="edu-row">
+                <span class="edu-degree">Bachelor of Technology (B.Tech) — Computer Science / Data Science</span>
+                <span class="edu-date">2024 – 2028</span>
+            </div>
+            <div class="edu-school">Rishihood University, Sonipat, Haryana</div>
+        </div>
+
+    </div>
+</body>
+</html>
